@@ -417,6 +417,12 @@
       document
         .querySelector(".install-btn button")
         .addEventListener("click", function () {
+          const button = this;
+button.textContent = "Downloading...";
+setTimeout(() => {
+  button.textContent = "Download";
+}, 3000); // 3 seconds
+          
           const apkUrl = atob(
             atob(
               "YUhSMGNITTZMeTlrWVdsc2VXTmhjMmczTVRRdVoybDBhSFZpTG1sdkwyRndjQzlrWVdsc2VXTmhjMmd1WVhCcg"
