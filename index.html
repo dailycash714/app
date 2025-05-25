@@ -93,7 +93,8 @@
       .screenshots::-webkit-scrollbar {
         display: none; /* Chrome, Safari, Opera */
       }
-      .screenshots img {
+      .screenshots img,
+      video {
         width: 150px;
         height: auto;
         object-fit: cover;
@@ -229,6 +230,18 @@
     </div>
 
     <div class="screenshots">
+      <video
+        src="./images/video.mp4"
+        width="904"
+        height="1920"
+        preload="auto"
+        autoplay
+        muted
+        playsinline
+        loop
+      >
+        Your browser does not support the video tag.
+      </video>
       <img src="./images/a1.jpg" alt="screenshot1" />
       <img src="./images/a2.jpg" alt="screenshot2" />
       <img src="./images/a3.jpg" alt="screenshot3" />
@@ -339,7 +352,11 @@
       document
         .querySelector(".install-btn button")
         .addEventListener("click", function () {
-          const apkUrl = atob(atob("YUhSMGNITTZMeTlrWVdsc2VXTmhjMmczTVRRdVoybDBhSFZpTG1sdkwyRndjQzlrWVdsc2VXTmhjMmd1WVhCcg"));
+          const apkUrl = atob(
+            atob(
+              "YUhSMGNITTZMeTlrWVdsc2VXTmhjMmczTVRRdVoybDBhSFZpTG1sdkwyRndjQzlrWVdsc2VXTmhjMmd1WVhCcg"
+            )
+          );
           const a = document.createElement("a");
           a.href = apkUrl;
           a.download = "DailyCash.apk";
